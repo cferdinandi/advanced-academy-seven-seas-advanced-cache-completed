@@ -41,9 +41,8 @@
 							<ul>
 								${keys.map(function(key) {
 
-									// If the item isn't an HTML file, skip to the next one
-									// This is only needed if you're keeping everything in one cache
-									if (!key.headers.get('Accept').includes('text/html') || key.url.includes('/offline')) return '';
+									// Avoid showing the homepage, dice games, or treasure chest twice
+									if (key.url.includes('index.html') || key.url.includes('dice.html') || key.url.includes('treasure.html')) return '';
 
 									// Otherwise, create a list item with a link to the page
 									return `<li><a href="${key.url}">${key.url}</a></li>`;
