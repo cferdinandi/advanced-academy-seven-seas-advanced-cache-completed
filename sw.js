@@ -1,5 +1,3 @@
-let version = 2;
-
 // Core assets
 let coreAssets = [
 	'offline.html',
