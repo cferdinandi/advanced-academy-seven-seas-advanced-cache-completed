@@ -44,7 +44,7 @@
 									// Avoid showing the homepage, dice games, or treasure chest twice
 									if (key.url.includes('index.html') || key.url.includes('dice.html') || key.url.includes('treasure.html')) return '';
 
-									// Otherwise, create a list item with a link to the page
+									// Create a list item with a link to the page
 									return `<li><a href="${key.url}">${key.url}</a></li>`;
 
 								}).join('')}
